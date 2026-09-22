@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="zh-CN" data-language="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="WA Score 是适用于 iPad 和 Mac 的原生乐谱创作工具，支持键盘、MIDI 与 Apple Pencil 手写转换。"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="WA Score" />
+    <meta
+      property="og:description"
+      content="Write, recognize, edit, engrave, and play music on iPad and Mac."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wa-score.fuluwa.top/" />
+    <meta property="og:image" content="https://wa-score.fuluwa.top/assets/wa-score-workspace.png" />
+    <title>WA Score · 乐谱创作、刻谱与播放</title>
+    <link rel="icon" type="image/png" href="assets/app-icon.png" />
+    <link rel="apple-touch-icon" href="assets/app-icon.png" />
+    <link rel="stylesheet" href="styles.css?v=3" />
+    <script src="script.js?v=2" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="WA Score home">
+        <img src="assets/app-icon.png" alt="" width="44" height="44" />
+        <span>WA Score</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#handwriting">
+          <span class="lang-zh">手写转换</span><span class="lang-en">Handwriting</span>
+        </a>
+        <a href="#features">
+          <span class="lang-zh">功能</span><span class="lang-en">Features</span>
+        </a>
+        <a href="privacy/">
+          <span class="lang-zh">隐私</span><span class="lang-en">Privacy</span>
+        </a>
+        <a href="support/">
+          <span class="lang-zh">支持</span><span class="lang-en">Support</span>
+        </a>
+      </nav>
+
+      <button class="language-toggle" type="button" aria-label="Switch language">
+        <span class="lang-zh">EN</span><span class="lang-en">中文</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy reveal">
+          <h1>
+            <span class="lang-zh">把灵感写成乐谱。</span>
+            <span class="lang-en">Write music.<br />Shape every note.</span>
+          </h1>
+          <p class="hero-lead lang-zh">
+            在 iPad 与 Mac 上，用 Apple Pencil、键盘或 MIDI 自然输入；从手写识别到刻谱、播放与导出，都围绕同一份可编辑乐谱完成。
+          </p>
+          <p class="hero-lead lang-en">
+            Write naturally with Apple Pencil, a keyboard, or MIDI. Move from handwriting recognition to editing, engraving, playback, and export in one score.
+          </p>
+          <div class="hero-actions">
+            <span class="store-placeholder" aria-disabled="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.1 12.5c0-2.7 2.2-4 2.3-4.1a5 5 0 0 0-4-2.2c-1.7-.2-3.3 1-4.2 1s-2.2-1-3.7-1A5.4 5.4 0 0 0 3 9c-1.9 3.3-.5 8.2 1.3 10.8.9 1.3 2 2.7 3.4 2.6 1.4-.1 1.9-.9 3.6-.9s2.1.9 3.6.9c1.5 0 2.4-1.3 3.3-2.6a11.8 11.8 0 0 0 1.5-3.1 4.8 4.8 0 0 1-2.6-4.2ZM14.3 4.4A4.8 4.8 0 0 0 15.4 1a4.9 4.9 0 0 0-3.2 1.7 4.5 4.5 0 0 0-1.1 3.2 4 4 0 0 0 3.2-1.5Z" />
+              </svg>
+              <span class="lang-zh">即将登陆 App Store</span>
+              <span class="lang-en">Coming to the App Store</span>
+            </span>
+            <a class="text-link" href="#workspace">
+              <span class="lang-zh">查看真实工作区</span><span class="lang-en">Explore the workspace</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-product reveal">
+          <div class="hero-window">
+            <div class="hero-window-bar" aria-hidden="true"><i></i><i></i><i></i><span>WA Score</span></div>
+            <img
+              src="assets/wa-score-workspace.png"
+              alt="WA Score real Mac interface showing a piano score in the Write workspace"
+            />
+          </div>
+          <img class="hero-app-icon" src="assets/app-icon.png" alt="" aria-hidden="true" />
+        </div>
+      </section>
+
+      <section class="workspace-section section-shell" id="workspace">
+        <div class="workspace-frame reveal">
+          <div class="window-bar" aria-hidden="true">
+            <i></i><i></i><i></i>
+            <span>WA Score</span>
+          </div>
+          <img
+            src="assets/wa-score-workspace.png"
+            alt="WA Score running on Mac with a piano score open in the Write workspace"
+          />
+        </div>
+        <p class="artifact-caption lang-zh">来自当前 WA Score Mac Catalyst 应用的真实界面；谱面内容为宣传展示。</p>
+        <p class="artifact-caption lang-en">The current WA Score Mac Catalyst interface, shown with a promotional score.</p>
+      </section>
+
+      <section class="handwriting section-shell" id="handwriting">
+        <div class="section-copy reveal">
+          <p class="eyebrow lang-zh">类似 StaffPad 的手写工作流</p>
+          <p class="eyebrow lang-en">A StaffPad-like handwriting workflow</p>
+          <h2 class="lang-zh">写下来，再把笔迹变成音符。</h2>
+          <h2 class="lang-en">Write it. Turn ink into notation.</h2>
+          <p class="lang-zh">
+            在五线谱上用 Apple Pencil 书写，识别后得到能够选择、移调、改变时值并继续排版的音符，而不是一张不可编辑的图片。
+          </p>
+          <p class="lang-en">
+            Write on the staff with Apple Pencil, recognize the ink, then keep editing the resulting notes—select, transpose, change duration, and engrave.
+          </p>
+        </div>
+
+        <div class="recognition-flow reveal" aria-label="Handwriting recognition workflow">
+          <div class="ink-stage">
+            <span class="stage-number">01</span>
+            <strong><span class="lang-zh">书写</span><span class="lang-en">Write</span></strong>
+            <div class="mini-staff ink-staff" aria-hidden="true">
+              <span class="ink-note ink-note-a"></span>
+              <span class="ink-note ink-note-b"></span>
+              <span class="ink-slur"></span>
+            </div>
+          </div>
+          <svg class="flow-arrow" viewBox="0 0 64 24" aria-hidden="true">
+            <path d="M2 12h56m-8-8 8 8-8 8" />
+          </svg>
+          <div class="ink-stage">
+            <span class="stage-number">02</span>
+            <strong><span class="lang-zh">识别</span><span class="lang-en">Recognize</span></strong>
+            <div class="recognition-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+          </div>
+          <svg class="flow-arrow" viewBox="0 0 64 24" aria-hidden="true">
+            <path d="M2 12h56m-8-8 8 8-8 8" />
+          </svg>
+          <div class="ink-stage">
+            <span class="stage-number">03</span>
+            <strong><span class="lang-zh">继续编辑</span><span class="lang-en">Keep editing</span></strong>
+            <div class="mini-staff clean-staff" aria-hidden="true">
+              <span class="clean-note clean-note-a">♪</span>
+              <span class="clean-note clean-note-b">♩</span>
+              <span class="selection-box"></span>
+            </div>
+          </div>
+        </div>
+
+        <p class="scope-note lang-zh">当前手写识别面向明确的音符输入流程，并会持续扩展识别范围。</p>
+        <p class="scope-note lang-en">Handwriting recognition currently focuses on a clear note-entry workflow, with broader recognition planned over time.</p>
+      </section>
+
+      <section class="feature-band" id="features">
+        <div class="section-shell feature-layout">
+          <div class="feature-intro reveal">
+            <h2 class="lang-zh">同一份乐谱，多种输入方式。</h2>
+            <h2 class="lang-en">One score, many ways to create.</h2>
+            <p class="lang-zh">键盘、MIDI、触控与手写共享同一套音乐语义。换一种设备，不必换一种工作方法。</p>
+            <p class="lang-en">Keyboard, MIDI, touch, and handwriting share the same musical model. Change devices without changing how your score works.</p>
+          </div>
+          <div class="feature-list reveal">
+            <article>
+              <span>⌨</span>
+              <div>
+                <h3 class="lang-zh">键盘与 MIDI</h3><h3 class="lang-en">Keyboard & MIDI</h3>
+                <p class="lang-zh">用快捷键或 MIDI 键盘逐步输入音符与和弦。</p>
+                <p class="lang-en">Step-enter notes and chords with shortcuts or a MIDI keyboard.</p>
+              </div>
+            </article>
+            <article>
+              <span>𝄞</span>
+              <div>
+                <h3 class="lang-zh">语义化编辑</h3><h3 class="lang-en">Semantic editing</h3>
+                <p class="lang-zh">选择音符和乐句，改变时值、音高、力度与演奏记号。</p>
+                <p class="lang-en">Select notes and phrases, then change duration, pitch, dynamics, and articulations.</p>
+              </div>
+            </article>
+            <article>
+              <span>▶</span>
+              <div>
+                <h3 class="lang-zh">刻谱与播放</h3><h3 class="lang-en">Engrave & play</h3>
+                <p class="lang-zh">谱面与试听从同一组音乐事件生成，编辑结果始终一致。</p>
+                <p class="lang-en">Notation and playback derive from the same musical events, so edits stay in sync.</p>
+              </div>
+            </article>
+            <article>
+              <span>↗</span>
+              <div>
+                <h3>MusicXML & PDF</h3>
+                <p class="lang-zh">导入和导出 MusicXML，或输出清晰的矢量 PDF。</p>
+                <p class="lang-en">Import and export MusicXML, or produce a crisp vector PDF.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="ownership section-shell">
+        <div class="ownership-copy reveal">
+          <h2 class="lang-zh">你的乐谱，始终由你掌控。</h2>
+          <h2 class="lang-en">Your scores stay yours.</h2>
+          <p class="lang-zh">无需账户，没有广告。乐谱可以保存在设备本地，也可以由你选择同步到自己的 iCloud Drive。</p>
+          <p class="lang-en">No account and no ads. Keep scores on your device, or choose to sync them through your own iCloud Drive.</p>
+          <div class="ownership-links">
+            <a href="privacy/"><span class="lang-zh">阅读隐私政策</span><span class="lang-en">Read the privacy policy</span></a>
+            <a href="support/"><span class="lang-zh">获得支持</span><span class="lang-en">Get support</span></a>
+          </div>
+        </div>
+        <div class="document-illustration reveal" aria-hidden="true">
+          <div class="cloud-shape"></div>
+          <div class="folder-shape">
+            <img src="assets/app-icon.png" alt="" />
+            <div class="sheet-shape"><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing-cta section-shell reveal">
+        <img src="assets/app-icon.png" alt="WA Score" width="104" height="104" />
+        <h2 class="lang-zh">灵感出现时，WA Score 就在那里。</h2>
+        <h2 class="lang-en">Ready when inspiration arrives.</h2>
+        <p class="lang-zh">适用于 iPad 与 Mac。App Store 即将上线。</p>
+        <p class="lang-en">Built for iPad and Mac. Coming soon to the App Store.</p>
+        <span class="store-placeholder compact" aria-disabled="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.1 12.5c0-2.7 2.2-4 2.3-4.1a5 5 0 0 0-4-2.2c-1.7-.2-3.3 1-4.2 1s-2.2-1-3.7-1A5.4 5.4 0 0 0 3 9c-1.9 3.3-.5 8.2 1.3 10.8.9 1.3 2 2.7 3.4 2.6 1.4-.1 1.9-.9 3.6-.9s2.1.9 3.6.9c1.5 0 2.4-1.3 3.3-2.6a11.8 11.8 0 0 0 1.5-3.1 4.8 4.8 0 0 1-2.6-4.2ZM14.3 4.4A4.8 4.8 0 0 0 15.4 1a4.9 4.9 0 0 0-3.2 1.7 4.5 4.5 0 0 0-1.1 3.2 4 4 0 0 0 3.2-1.5Z" /></svg>
+          <span class="lang-zh">即将登陆 App Store</span><span class="lang-en">Coming to the App Store</span>
+        </span>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <a class="footer-brand" href="#top"><img src="assets/app-icon.png" alt="" /> WA Score</a>
+      <p>© 2026 WA Score</p>
+      <nav aria-label="Footer navigation">
+        <a href="privacy/"><span class="lang-zh">隐私政策</span><span class="lang-en">Privacy Policy</span></a>
+        <a href="support/"><span class="lang-zh">支持</span><span class="lang-en">Support</span></a>
+      </nav>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+.prose-page { padding: 110px 0 130px; }
+.prose-page > header { max-width: 900px; padding-bottom: 72px; border-bottom: 1px solid var(--line); }
+.prose-page h1 { margin: 0; max-width: 100%; font-size: clamp(48px, 6vw, 80px); line-height: 0.98; letter-spacing: -0.06em; overflow-wrap: anywhere; }
+.prose-page > header p { margin: 26px 0 0; color: var(--body); font-size: 21px; line-height: 1.55; }
+.primary-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; padding: 15px 20px; border-radius: 14px; background: var(--ink); color: white; font-weight: 700; }
+.primary-link svg { width: 18px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.prose-page section { max-width: 900px; padding: 46px 0; border-bottom: 1px solid var(--line); }
+.prose-page section h2 { margin: 0 0 16px; font-size: 30px; letter-spacing: -0.035em; }
+.prose-page section h3 { margin: 0 0 8px; font-size: 19px; }
+.prose-page section p, .prose-page section li { color: var(--body); font-size: 17px; line-height: 1.7; }
+.prose-page section a { color: var(--blue); font-weight: 650; }
+.prose-page ul { padding-left: 22px; }
+.support-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.support-list article { padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--soft); }
+.support-list article p { margin-bottom: 0; font-size: 15px; }
+@media (max-width: 760px) {
+  .prose-page { padding: 78px 0 100px; }
+  .prose-page > header { padding-bottom: 52px; }
+  .support-list { grid-template-columns: 1fr; }
+}
