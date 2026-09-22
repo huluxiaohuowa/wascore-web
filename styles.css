@@ -141,11 +141,49 @@ html[data-language="en"] .lang-en { display: revert; }
 .hero-window > img { width: 100%; height: auto; }
 .hero-app-icon { position: absolute; z-index: 3; width: 108px; height: 108px; right: -18px; bottom: 0; border: 8px solid rgba(255, 255, 255, 0.9); border-radius: 30px; box-shadow: 0 20px 50px rgba(32, 82, 215, 0.28); }
 
-.workspace-section { padding: 16px 0 120px; }
-.workspace-frame { position: relative; border: 1px solid rgba(190, 209, 234, 0.9); border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: 0 34px 90px rgba(27, 66, 126, 0.19), 0 0 52px rgba(32, 137, 255, 0.1); }
+.workspace-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 104px 64px 72px;
+  border: 1px solid rgba(190, 211, 239, 0.78);
+  border-radius: 48px;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(32, 224, 211, 0.3), transparent 31%),
+    radial-gradient(circle at 84% 20%, rgba(55, 139, 255, 0.34), transparent 34%),
+    radial-gradient(circle at 60% 92%, rgba(115, 74, 255, 0.28), transparent 42%),
+    linear-gradient(145deg, #f8fdff 0%, #edf6ff 44%, #f5efff 100%);
+  box-shadow: 0 44px 120px rgba(31, 77, 151, 0.15), inset 0 1px rgba(255, 255, 255, 0.9);
+}
+.workspace-section::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 520px;
+  height: 520px;
+  left: -170px;
+  bottom: -250px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 0 90px rgba(28, 216, 218, 0.2), inset 0 0 70px rgba(255, 255, 255, 0.28);
+}
+.workspace-section::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 520px;
+  height: 180px;
+  right: -80px;
+  top: 26px;
+  border-radius: 50%;
+  background: rgba(73, 124, 255, 0.2);
+  filter: blur(54px);
+  transform: rotate(-12deg);
+}
+.workspace-frame { position: relative; z-index: 1; width: min(1080px, 92%); margin-inline: auto; border: 1px solid rgba(255, 255, 255, 0.88); border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: 0 48px 110px rgba(20, 53, 112, 0.28), 0 0 0 10px rgba(255, 255, 255, 0.16), 0 0 70px rgba(42, 139, 255, 0.2); transform: perspective(1600px) rotateX(2deg) rotateY(-1deg); transform-origin: center; }
 .workspace-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit; box-shadow: inset 0 1px rgba(255, 255, 255, 0.82), inset 0 0 36px rgba(79, 159, 255, 0.05); }
 .workspace-frame img { width: 100%; height: auto; }
-.artifact-caption { margin: 20px auto 0; text-align: center; color: var(--muted); font-size: 13px; }
+.artifact-caption { position: relative; z-index: 1; margin: 34px auto 0; text-align: center; color: #526784; font-size: 13px; font-weight: 600; }
 
 .handwriting { padding: 126px 0 130px; border-top: 1px solid var(--line); }
 .section-copy { max-width: 850px; }
@@ -237,7 +275,8 @@ html[data-language="en"] .lang-en { display: revert; }
   .hero-product { padding: 28px 0 54px; }
   .hero-window { width: 100%; transform: none; }
   .hero-app-icon { right: 18px; width: 90px; height: 90px; border-radius: 25px; }
-  .workspace-section { padding-bottom: 90px; }
+  .workspace-section { width: calc(100% - 24px); padding: 68px 24px 52px; border-radius: 34px; }
+  .workspace-frame { width: 100%; transform: none; }
   .recognition-flow { grid-template-columns: 1fr; }
   .flow-arrow { justify-self: center; transform: rotate(90deg); }
   .feature-layout, .ownership { grid-template-columns: 1fr; gap: 60px; }
@@ -256,7 +295,9 @@ html[data-language="en"] .lang-en { display: revert; }
   .hero-product { margin-inline: -8px; padding-bottom: 44px; }
   .hero-window { border-radius: 14px; }
   .hero-app-icon { width: 72px; height: 72px; right: 10px; border-width: 5px; border-radius: 21px; }
-  .workspace-frame { border-radius: 18px; }
+  .workspace-section { width: calc(100% - 16px); padding: 42px 10px 34px; border-radius: 24px; }
+  .workspace-frame { border-radius: 16px; box-shadow: 0 28px 70px rgba(20, 53, 112, 0.24), 0 0 0 6px rgba(255, 255, 255, 0.14), 0 0 44px rgba(42, 139, 255, 0.18); }
+  .artifact-caption { margin-top: 24px; padding-inline: 12px; }
   .handwriting, .feature-band { padding: 90px 0; }
   .section-copy h2, .feature-intro h2, .ownership h2, .closing-cta h2 { font-size: 40px; }
   .feature-list article { grid-template-columns: 50px 1fr; gap: 16px; }
