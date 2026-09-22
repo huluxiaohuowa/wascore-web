@@ -28,3 +28,36 @@ const revealObserver = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+
+const workspaceStage = document.querySelector(".workspace-section");
+const smartLights = workspaceStage ? [...workspaceStage.querySelectorAll(".smart-light")] : [];
+const canTrackPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if (workspaceStage && smartLights.length && canTrackPointer.matches && !reduceMotion.matches) {
+  const depths = [34, -42, 24];
+  let pendingFrame = 0;
+  let pointerX = 0;
+  let pointerY = 0;
+
+  const renderLights = () => {
+    smartLights.forEach((light, index) => {
+      const depth = depths[index] ?? 24;
+      light.style.transform = `translate3d(${pointerX * depth}px, ${pointerY * depth}px, 0)`;
+    });
+    pendingFrame = 0;
+  };
+
+  workspaceStage.addEventListener("pointermove", (event) => {
+    const bounds = workspaceStage.getBoundingClientRect();
+    pointerX = (event.clientX - bounds.left) / bounds.width - 0.5;
+    pointerY = (event.clientY - bounds.top) / bounds.height - 0.5;
+    if (!pendingFrame) pendingFrame = requestAnimationFrame(renderLights);
+  });
+
+  workspaceStage.addEventListener("pointerleave", () => {
+    pointerX = 0;
+    pointerY = 0;
+    if (!pendingFrame) pendingFrame = requestAnimationFrame(renderLights);
+  });
+}
