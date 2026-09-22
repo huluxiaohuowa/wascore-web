@@ -121,23 +121,11 @@ html[data-language="en"] .lang-en { display: revert; }
   transform: translate(-50%, -50%);
 }
 .hero-window { position: relative; z-index: 2; width: 760px; overflow: hidden; border: 1px solid #cdd7e5; border-radius: 20px; background: white; box-shadow: 0 38px 90px rgba(24, 65, 130, 0.2); transform: perspective(1200px) rotateY(-5deg) rotateX(1deg); transform-origin: center; }
-.hero-window-bar { height: 32px; display: flex; align-items: center; gap: 6px; padding: 0 11px; background: #f5f7fa; border-bottom: 1px solid #dce3ec; }
-.hero-window-bar i { width: 8px; height: 8px; border-radius: 50%; background: #d1d7df; }
-.hero-window-bar i:first-child { background: #ff6159; }
-.hero-window-bar i:nth-child(2) { background: #ffbd2e; }
-.hero-window-bar i:nth-child(3) { background: #28c941; }
-.hero-window-bar span { margin: 0 auto; padding-right: 42px; color: #69768a; font-size: 10px; font-weight: 650; }
 .hero-window > img { width: 100%; }
 .hero-app-icon { position: absolute; z-index: 3; width: 108px; height: 108px; right: -18px; bottom: 0; border: 8px solid rgba(255, 255, 255, 0.9); border-radius: 30px; box-shadow: 0 20px 50px rgba(32, 82, 215, 0.28); }
 
 .workspace-section { padding: 16px 0 120px; }
 .workspace-frame { border: 1px solid #ced8e6; border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: var(--shadow); }
-.window-bar { height: 48px; display: flex; align-items: center; gap: 8px; padding: 0 17px; background: #f5f7fa; border-bottom: 1px solid #dde3ec; }
-.window-bar i { width: 12px; height: 12px; border-radius: 50%; background: #d4d9e0; }
-.window-bar i:first-child { background: #ff6159; }
-.window-bar i:nth-child(2) { background: #ffbd2e; }
-.window-bar i:nth-child(3) { background: #28c941; }
-.window-bar span { margin: 0 auto; padding-right: 56px; color: #66758a; font-size: 13px; font-weight: 650; }
 .workspace-frame img { width: 100%; }
 .artifact-caption { margin: 20px auto 0; text-align: center; color: var(--muted); font-size: 13px; }
 
@@ -232,7 +220,6 @@ html[data-language="en"] .lang-en { display: revert; }
   .hero-window { width: 100%; transform: none; }
   .hero-app-icon { right: 18px; width: 90px; height: 90px; border-radius: 25px; }
   .workspace-section { padding-bottom: 90px; }
-  .window-bar { height: 38px; }
   .recognition-flow { grid-template-columns: 1fr; }
   .flow-arrow { justify-self: center; transform: rotate(90deg); }
   .feature-layout, .ownership { grid-template-columns: 1fr; gap: 60px; }
