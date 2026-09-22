@@ -31,6 +31,7 @@ document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe
 
 const workspaceStage = document.querySelector(".workspace-section");
 const smartLights = workspaceStage ? [...workspaceStage.querySelectorAll(".smart-light")] : [];
+const intelligenceField = workspaceStage?.querySelector(".intelligence-field");
 const canTrackPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -45,6 +46,9 @@ if (workspaceStage && smartLights.length && canTrackPointer.matches && !reduceMo
       const depth = depths[index] ?? 24;
       light.style.transform = `translate3d(${pointerX * depth}px, ${pointerY * depth}px, 0)`;
     });
+    if (intelligenceField) {
+      intelligenceField.style.transform = `translate3d(${pointerX * -16}px, ${pointerY * -12}px, 0)`;
+    }
     pendingFrame = 0;
   };
 
