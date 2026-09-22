@@ -138,13 +138,13 @@ html[data-language="en"] .lang-en { display: revert; }
 }
 .hero-window { position: relative; z-index: 2; width: 760px; overflow: hidden; isolation: isolate; border: 1px solid rgba(205, 215, 229, 0.9); border-radius: 20px; background: white; box-shadow: 0 42px 100px rgba(24, 65, 130, 0.26), 0 0 54px rgba(75, 162, 255, 0.14); transform: perspective(1200px) rotateY(-5deg) rotateX(1deg); transform-origin: center; }
 .hero-window::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(128deg, rgba(255, 255, 255, 0.2), transparent 28%, transparent 70%, rgba(84, 132, 255, 0.08)); }
-.hero-window > img { width: 100%; }
+.hero-window > img { width: 100%; height: auto; }
 .hero-app-icon { position: absolute; z-index: 3; width: 108px; height: 108px; right: -18px; bottom: 0; border: 8px solid rgba(255, 255, 255, 0.9); border-radius: 30px; box-shadow: 0 20px 50px rgba(32, 82, 215, 0.28); }
 
 .workspace-section { padding: 16px 0 120px; }
 .workspace-frame { position: relative; border: 1px solid rgba(190, 209, 234, 0.9); border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: 0 34px 90px rgba(27, 66, 126, 0.19), 0 0 52px rgba(32, 137, 255, 0.1); }
 .workspace-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit; box-shadow: inset 0 1px rgba(255, 255, 255, 0.82), inset 0 0 36px rgba(79, 159, 255, 0.05); }
-.workspace-frame img { width: 100%; }
+.workspace-frame img { width: 100%; height: auto; }
 .artifact-caption { margin: 20px auto 0; text-align: center; color: var(--muted); font-size: 13px; }
 
 .handwriting { padding: 126px 0 130px; border-top: 1px solid var(--line); }
@@ -257,7 +257,6 @@ html[data-language="en"] .lang-en { display: revert; }
   .hero-window { border-radius: 14px; }
   .hero-app-icon { width: 72px; height: 72px; right: 10px; border-width: 5px; border-radius: 21px; }
   .workspace-frame { border-radius: 18px; }
-  .workspace-frame img { min-height: 270px; object-fit: cover; object-position: center; }
   .handwriting, .feature-band { padding: 90px 0; }
   .section-copy h2, .feature-intro h2, .ownership h2, .closing-cta h2 { font-size: 40px; }
   .feature-list article { grid-template-columns: 50px 1fr; gap: 16px; }
