@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="WA Score 是适用于 iPad 和 Mac 的原生乐谱创作工具，支持键盘、MIDI 与 Apple Pencil 手写转换。"
+      content="WA Score 是适用于 iPad 和 Mac 的原生乐谱创作工具，支持本地 AI 音频转钢琴谱、Apple Pencil 基础音符手写转换，以及编辑、播放和多页导出。"
     />
     <meta name="theme-color" content="#ffffff" />
     <meta property="og:title" content="WA Score" />
@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://wa-score.fuluwa.top/" />
     <meta property="og:image" content="https://wa-score.fuluwa.top/assets/wa-score-workspace.png" />
-    <title>WA Score · 乐谱创作、刻谱与播放</title>
+    <title>WA Score · 音频转钢琴谱与 Pencil 手写创作</title>
     <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
     <link rel="icon" type="image/png" href="/favicon-32x32.png?v=2" sizes="32x32" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
@@ -35,6 +35,7 @@
           <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 9.2 10 3.5l6.5 5.7v7.3h-4.2v-4.7H7.7v4.7H3.5Z" /></svg>
           <span class="lang-zh">主页</span><span class="lang-en">Home</span>
         </a>
+        <a class="nav-audio" href="#audio-piano"><span class="lang-zh">音频转谱</span><span class="lang-en">Audio to score</span></a>
         <a class="nav-handwriting" href="#handwriting">
           <span class="lang-zh">手写转换</span><span class="lang-en">Handwriting</span>
         </a>
@@ -58,15 +59,19 @@
       <section class="hero section-shell">
         <div class="hero-copy reveal">
           <h1>
-            <span class="lang-zh">把灵感写成乐谱。</span>
-            <span class="lang-en">Write music.<br />Shape every note.</span>
+            <span class="lang-zh">听见灵感，<br />写成乐谱。</span>
+            <span class="lang-en">Hear it. Write it.<br />Make it yours.</span>
           </h1>
           <p class="hero-lead lang-zh">
-            在 iPad 与 Mac 上，用 Apple Pencil、键盘或 MIDI 自然输入；从手写识别到刻谱、播放与导出，都围绕同一份可编辑乐谱完成。
+            导入音频，在设备上生成钢琴谱草稿；或在 iPad 上用 Apple Pencil 写下音符。接着编辑、试听，把灵感变成自己的作品。
           </p>
           <p class="hero-lead lang-en">
-            Write naturally with Apple Pencil, a keyboard, or MIDI. Move from handwriting recognition to editing, engraving, playback, and export in one score.
+            Turn audio into a piano score draft on your device. Or write notes with Apple Pencil on iPad. Then edit, listen, and make the music your own.
           </p>
+          <div class="creation-links">
+            <a href="#audio-piano"><span class="lang-zh">♫ 音频转钢琴谱</span><span class="lang-en">♫ Audio to piano score</span><b>↗</b></a>
+            <a href="#handwriting"><span class="lang-zh">✎ Pencil 手写转音符</span><span class="lang-en">✎ Pencil to notation</span><b>↗</b></a>
+          </div>
           <div class="hero-actions">
             <span class="store-placeholder" aria-disabled="true">
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -95,46 +100,42 @@
         </div>
       </section>
 
-      <section class="workspace-section section-shell" id="workspace">
-        <div class="smart-light smart-light-a" aria-hidden="true"><i></i></div>
-        <div class="smart-light smart-light-b" aria-hidden="true"><i></i></div>
-        <div class="smart-light smart-light-c" aria-hidden="true"><i></i></div>
-        <div class="intelligence-field" aria-hidden="true">
-          <svg viewBox="0 0 1200 620" preserveAspectRatio="none">
-            <g class="neural-links">
-              <path d="M36 118 186 54 340 124 518 48 708 122 894 58 1164 136" />
-              <path d="M18 434 194 512 354 438 520 548 718 452 906 530 1180 428" />
-              <path d="M186 54 194 512M340 124 354 438M518 48 520 548M708 122 718 452M894 58 906 530" />
-            </g>
-            <g class="neural-nodes">
-              <circle cx="36" cy="118" r="5" /><circle cx="186" cy="54" r="6" /><circle cx="340" cy="124" r="4" />
-              <circle cx="518" cy="48" r="7" /><circle cx="708" cy="122" r="5" /><circle cx="894" cy="58" r="6" />
-              <circle cx="1164" cy="136" r="5" /><circle cx="18" cy="434" r="5" /><circle cx="194" cy="512" r="6" />
-              <circle cx="354" cy="438" r="4" /><circle cx="520" cy="548" r="7" /><circle cx="718" cy="452" r="5" />
-              <circle cx="906" cy="530" r="6" /><circle cx="1180" cy="428" r="5" />
-            </g>
-          </svg>
-          <i class="data-pulse data-pulse-a"></i>
-          <i class="data-pulse data-pulse-b"></i>
-          <i class="data-pulse data-pulse-c"></i>
+      <section class="audio-section section-shell" id="audio-piano">
+        <div class="section-copy reveal">
+          <p class="eyebrow"><span class="lang-zh">本地 AI · 音频转钢琴谱</span><span class="lang-en">ON-DEVICE AI · AUDIO TO PIANO SCORE</span></p>
+          <h2 class="lang-zh">从一段音频，<br />开始一份新乐谱。</h2>
+          <h2 class="lang-en">A recording in.<br />A new score to make yours.</h2>
+          <p class="lang-zh">选择歌曲或演奏录音，让设备上的 AI 生成双手钢琴改编草稿。确认速度与拍号后，创建独立的可编辑乐谱，继续修改、试听和导出。</p>
+          <p class="lang-en">Choose a song or performance and let on-device AI create a two-hand piano arrangement draft. Review tempo and meter, then create a separate editable score to refine, play, and export.</p>
         </div>
-        <div class="intelligence-core" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-        <div class="workspace-frame reveal">
-          <img
-            src="assets/wa-score-workspace.webp"
-            width="2400"
-            height="1173"
-            alt="WA Score running on Mac with a piano score open in the Write workspace"
-          />
+        <div class="audio-showcase reveal">
+          <div class="audio-source">
+            <span class="showcase-label"><span class="lang-zh">01 / 选择音频</span><span class="lang-en">01 / CHOOSE AUDIO</span></span>
+            <img class="lang-zh" src="assets/audio-import-zh.png" width="1226" height="1226" alt="WA Score 音频转钢琴谱界面，提供改编风格与音频选择" loading="lazy" />
+            <img class="lang-en" src="assets/audio-import-en.png" width="1094" height="1238" alt="WA Score audio import sheet with arrangement style and file selection" loading="lazy" />
+          </div>
+          <div class="audio-light" aria-hidden="true"><span>♪</span><i></i><i></i><i></i><b>→</b></div>
+          <div class="audio-result">
+            <span class="showcase-label"><span class="lang-zh">02 / 可编辑钢琴谱</span><span class="lang-en">02 / EDITABLE PIANO SCORE</span></span>
+            <img src="assets/audio-piano-result.png" width="800" height="1132" alt="Actual generated two-staff piano score, page 1 of 4" loading="lazy" />
+          </div>
         </div>
+        <div class="audio-benefits">
+          <p><strong class="lang-zh">音频留在设备内</strong><strong class="lang-en">Your audio stays local</strong><span class="lang-zh">离线处理，无需上传录音。</span><span class="lang-en">Offline processing. No audio upload.</span></p>
+          <p><strong class="lang-zh">保留原稿，另建新谱</strong><strong class="lang-en">A separate new document</strong><span class="lang-zh">原有乐谱保留，改编结果自由修改。</span><span class="lang-en">Keep your existing score and refine the new draft.</span></p>
+          <p><strong class="lang-zh">从试听到多页导出</strong><strong class="lang-en">Listen, edit, and export</strong><span class="lang-zh">钢琴播放 · MusicXML · 多页 PDF</span><span class="lang-en">Piano playback · MusicXML · Multi-page PDF</span></p>
+        </div>
+        <p class="scope-note lang-zh">音频转谱预览功能 · 支持 WAV、MP3、M4A、AIFF，最长 5 分钟。结果为改编草稿，请核对节奏、旋律与手部跳跃。</p>
+        <p class="scope-note lang-en">Audio-to-score preview · WAV, MP3, M4A, AIFF, up to 5 minutes. Results are arrangement drafts; review rhythm, melody, and hand jumps.</p>
+        <p class="sample-credit">Demo: <a href="https://freemusicarchive.org/music/Kevin_MacLeod/Jazz_Sampler/Vibe_Ace">Vibe Ace — Kevin MacLeod</a> · <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> · Piano arrangement generated by WA Score.</p>
       </section>
 
       <section class="handwriting section-shell" id="handwriting">
         <div class="section-copy reveal">
-          <p class="eyebrow lang-zh">类似 StaffPad 的手写工作流</p>
-          <p class="eyebrow lang-en">A StaffPad-like handwriting workflow</p>
-          <h2 class="lang-zh">写下来，再把笔迹变成音符。</h2>
-          <h2 class="lang-en">Write it. Turn ink into notation.</h2>
+          <p class="eyebrow lang-zh">APPLE PENCIL · 在 iPad 上手写音符</p>
+          <p class="eyebrow lang-en">APPLE PENCIL · HANDWRITE NOTES ON IPAD</p>
+          <h2 class="lang-zh">提笔写音符，<br />落笔后继续编辑。</h2>
+          <h2 class="lang-en">Write with Pencil.<br />Keep creating with notes.</h2>
           <p class="lang-zh">
             在五线谱上用 Apple Pencil 书写，识别后得到能够选择、移调、改变时值并继续排版的音符，而不是一张不可编辑的图片。
           </p>
@@ -175,8 +176,42 @@
           </div>
         </div>
 
-        <p class="scope-note lang-zh">当前手写识别面向明确的音符输入流程，并会持续扩展识别范围。</p>
-        <p class="scope-note lang-en">Handwriting recognition currently focuses on a clear note-entry workflow, with broader recognition planned over time.</p>
+        <p class="scope-note lang-zh">Pencil 手写转换目前支持基础音符输入，识别后请核对；复杂记号与整页手写识别仍在完善。Apple Pencil 需兼容的 iPad。</p>
+        <p class="scope-note lang-en">Pencil conversion currently supports basic note entry and needs review. Complex symbols and full-page handwriting recognition are still in development. Apple Pencil requires a compatible iPad.</p>
+      </section>
+
+      <section class="workspace-section section-shell" id="workspace">
+        <div class="smart-light smart-light-a" aria-hidden="true"><i></i></div>
+        <div class="smart-light smart-light-b" aria-hidden="true"><i></i></div>
+        <div class="smart-light smart-light-c" aria-hidden="true"><i></i></div>
+        <div class="intelligence-field" aria-hidden="true">
+          <svg viewBox="0 0 1200 620" preserveAspectRatio="none">
+            <g class="neural-links">
+              <path d="M36 118 186 54 340 124 518 48 708 122 894 58 1164 136" />
+              <path d="M18 434 194 512 354 438 520 548 718 452 906 530 1180 428" />
+              <path d="M186 54 194 512M340 124 354 438M518 48 520 548M708 122 718 452M894 58 906 530" />
+            </g>
+            <g class="neural-nodes">
+              <circle cx="36" cy="118" r="5" /><circle cx="186" cy="54" r="6" /><circle cx="340" cy="124" r="4" />
+              <circle cx="518" cy="48" r="7" /><circle cx="708" cy="122" r="5" /><circle cx="894" cy="58" r="6" />
+              <circle cx="1164" cy="136" r="5" /><circle cx="18" cy="434" r="5" /><circle cx="194" cy="512" r="6" />
+              <circle cx="354" cy="438" r="4" /><circle cx="520" cy="548" r="7" /><circle cx="718" cy="452" r="5" />
+              <circle cx="906" cy="530" r="6" /><circle cx="1180" cy="428" r="5" />
+            </g>
+          </svg>
+          <i class="data-pulse data-pulse-a"></i>
+          <i class="data-pulse data-pulse-b"></i>
+          <i class="data-pulse data-pulse-c"></i>
+        </div>
+        <div class="intelligence-core" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+        <div class="workspace-frame reveal">
+          <img
+            src="assets/wa-score-workspace.webp"
+            width="2400"
+            height="1173"
+            alt="WA Score running on Mac with a piano score open in the Write workspace"
+          />
+        </div>
       </section>
 
       <section class="feature-band" id="features">
