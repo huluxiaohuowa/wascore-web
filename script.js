@@ -6,6 +6,15 @@ const setLanguage = (language) => {
   root.dataset.language = nextLanguage;
   root.lang = nextLanguage === "en" ? "en" : "zh-CN";
   localStorage.setItem("wa-score-language", nextLanguage);
+  const campaign = document.querySelector("#audio-campaign-image");
+  if (campaign) {
+    const base = `assets/audio-piano-${nextLanguage}`;
+    campaign.srcset = `${base}-800.webp 800w, ${base}-1586.webp 1586w`;
+    campaign.src = `${base}-1586.webp`;
+    campaign.alt = nextLanguage === "zh"
+      ? "把音频变成钢琴谱：选择音频、本地 AI 生成草稿，再编辑与导出。宣传效果图，生成结果需校对。"
+      : "Turn audio into a piano score: choose audio, create a draft on-device, then edit and export. Promotional artwork; review generated results.";
+  }
 };
 
 const savedLanguage = localStorage.getItem("wa-score-language");
