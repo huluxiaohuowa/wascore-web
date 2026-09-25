@@ -90,7 +90,7 @@ html[data-language="en"] .lang-en { display: revert; }
 }
 .hero-lead { max-width: 620px; margin: 30px 0 0; color: var(--body); font-size: clamp(19px, 1.8vw, 25px); line-height: 1.52; letter-spacing: -0.02em; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-top: 36px; }
-.store-placeholder {
+.store-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -103,10 +103,12 @@ html[data-language="en"] .lang-en { display: revert; }
   font-size: 16px;
   font-weight: 660;
   box-shadow: 0 13px 32px rgba(8, 27, 58, 0.16);
-  cursor: not-allowed;
+  cursor: pointer;
 }
-.store-placeholder svg { width: 22px; height: 22px; fill: currentColor; }
-.store-placeholder.compact { min-height: 50px; margin-top: 20px; font-size: 15px; }
+.store-link:hover { background: #163465; }
+.store-link:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+.store-link svg { width: 22px; height: 22px; fill: currentColor; }
+.store-link.compact { min-height: 50px; margin-top: 20px; font-size: 15px; }
 .text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--blue); font-size: 16px; font-weight: 700; }
 .text-link svg { width: 18px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; transition: transform 180ms ease; }
 .text-link:hover svg { transform: translateX(4px); }
